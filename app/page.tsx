@@ -12,6 +12,12 @@ export default function Home() {
         werden jetzt aus <code>lib/data.ts</code> geladen.
       </p>
 
+      <div className="mt-6 flex justify-center">
+        <a href="/import" className="btn-primary text-[15px]">
+          Portfolio importieren
+        </a>
+      </div>
+
       <div className="mt-8 overflow-hidden rounded-xl border border-[#DDE2E9] bg-white">
         <table className="w-full text-left text-sm">
           <thead>
