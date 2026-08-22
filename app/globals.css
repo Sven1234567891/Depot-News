@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  color: #101826;
+  background:
+    radial-gradient(1200px 480px at 12% -10%, rgba(54, 83, 244, 0.1), transparent 60%),
+    radial-gradient(900px 420px at 100% 0%, rgba(54, 83, 244, 0.06), transparent 55%),
+    #eef1f5;
+  min-height: 100vh;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, #3653f4 0%, #6c4cf4 100%);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 1.4rem;
+  border-radius: 0.75rem;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 38, 0.08),
+    0 12px 24px -10px rgba(54, 83, 244, 0.55);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow:
+    0 2px 4px rgba(16, 24, 38, 0.1),
+    0 18px 32px -10px rgba(54, 83, 244, 0.65);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+
+.pulse-dot {
+  position: relative;
+  display: inline-flex;
+  height: 9px;
+  width: 9px;
+  border-radius: 999px;
+  background: #fff;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #fff;
+  animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .pulse-dot::after {
+    animation: none;
+    transition: none;
+  }
+}
