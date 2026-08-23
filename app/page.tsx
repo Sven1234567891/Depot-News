@@ -12,9 +12,15 @@ export default function Home() {
         werden jetzt aus <code>lib/data.ts</code> geladen.
       </p>
 
-      <div className="mt-6 flex justify-center">
+      <div className="mt-6 flex flex-wrap justify-center gap-3">
         <a href="/import" className="btn-primary text-[15px]">
           Portfolio importieren
+        </a>
+        <a
+          href="/dashboard"
+          className="inline-flex items-center rounded-xl border border-[#DDE2E9] bg-white px-5 py-3 text-[15px] font-medium text-[#101826] hover:bg-[#F7F8FA]"
+        >
+          Dashboard ansehen
         </a>
       </div>
 
